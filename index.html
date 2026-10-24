@@ -61,7 +61,7 @@ input:focus{outline:2px solid #E9935A;outline-offset:1px}
   <div style="position:relative;aspect-ratio:5/4">
     <div style="position:absolute;inset:6% 0 -6% 8%;background:#E4EFDF;border-radius:36px"></div>
     <div style="position:absolute;inset:0;left:6%;right:0">
-      <image-slot id="hero" shape="rounded" radius="32" placeholder="Fotografija: maca i kuca u skloništu"></image-slot>
+      <image-slot id="hero" src="uploads/1000012176-58463f93.jpg" shape="rounded" radius="32" placeholder="Fotografija: maca i kuca u skloništu"></image-slot>
     </div>
   </div>
 </section>
@@ -75,7 +75,7 @@ input:focus{outline:2px solid #E9935A;outline-offset:1px}
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:20px">
       <article style="background:#FFFAF4;border:1px solid #EFE5DA;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
-        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-1" shape="rect" placeholder="Glavna slika: Gala"></image-slot>
+        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-1" src="uploads/1792784523194.jpeg" shape="rect" placeholder="Glavna slika: Gala"></image-slot>
           <button type="button" onClick="{{ open1 }}" style="position:absolute;right:10px;bottom:10px;font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border:none;border-radius:999px;background:rgba(255,250,244,0.94);color:#3B322C;cursor:pointer;box-shadow:0 4px 12px -6px rgba(59,50,44,0.4)" style-hover="background:#FFFFFF">Sve slike · 5</button>
         </div>
         <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1">
@@ -89,7 +89,7 @@ input:focus{outline:2px solid #E9935A;outline-offset:1px}
         </div>
       </article>
       <article style="background:#FFFAF4;border:1px solid #EFE5DA;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
-        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-2" shape="rect" placeholder="Glavna slika: Mila"></image-slot>
+        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-2" src="uploads/1000012145.jpg" shape="rect" placeholder="Glavna slika: Mila"></image-slot>
           <button type="button" onClick="{{ open2 }}" style="position:absolute;right:10px;bottom:10px;font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border:none;border-radius:999px;background:rgba(255,250,244,0.94);color:#3B322C;cursor:pointer;box-shadow:0 4px 12px -6px rgba(59,50,44,0.4)" style-hover="background:#FFFFFF">Sve slike · 5</button>
         </div>
         <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1">
@@ -117,7 +117,7 @@ input:focus{outline:2px solid #E9935A;outline-offset:1px}
         </div>
       </article>
       <article style="background:#FFFAF4;border:1px solid #EFE5DA;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
-        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-4" shape="rect" placeholder="Glavna slika: Bela"></image-slot>
+        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-4" src="uploads/eb84248f-7cb2-4254-9c43-9d1c4f3b7180.jpg" shape="rect" placeholder="Glavna slika: Bela"></image-slot>
           <button type="button" onClick="{{ open4 }}" style="position:absolute;right:10px;bottom:10px;font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border:none;border-radius:999px;background:rgba(255,250,244,0.94);color:#3B322C;cursor:pointer;box-shadow:0 4px 12px -6px rgba(59,50,44,0.4)" style-hover="background:#FFFFFF">Sve slike · 5</button>
         </div>
         <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1">
@@ -131,7 +131,7 @@ input:focus{outline:2px solid #E9935A;outline-offset:1px}
         </div>
       </article>
       <article style="background:#FFFAF4;border:1px solid #EFE5DA;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
-        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-5" shape="rect" placeholder="Glavna slika: Lari"></image-slot>
+        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-5" src="uploads/1000012175.jpg" shape="rect" placeholder="Glavna slika: Lari"></image-slot>
           <button type="button" onClick="{{ open5 }}" style="position:absolute;right:10px;bottom:10px;font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border:none;border-radius:999px;background:rgba(255,250,244,0.94);color:#3B322C;cursor:pointer;box-shadow:0 4px 12px -6px rgba(59,50,44,0.4)" style-hover="background:#FFFFFF">Sve slike · 5</button>
         </div>
         <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1">
@@ -345,7 +345,7 @@ input:focus{outline:2px solid #E9935A;outline-offset:1px}
       <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:28px 44px;align-items:center;background:#FFFAF4;border:1px solid #EFE5DA;border-radius:28px;padding:clamp(14px,3vw,24px)">
         <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
           <div style="aspect-ratio:3/4;position:relative"><image-slot id="story2-before" radius="18" placeholder="Pre: u skloništu"></image-slot><span style="position:absolute;top:10px;left:10px;background:#3B322C;color:#FFFAF4;font-size:12px;font-weight:800;letter-spacing:0.08em;padding:5px 10px;border-radius:999px;pointer-events:none">PRE</span></div>
-          <div style="aspect-ratio:3/4;position:relative"><image-slot id="story2-after" radius="18" placeholder="Posle: sa svojim ljudima"></image-slot><span style="position:absolute;top:10px;left:10px;background:#A9CBA1;color:#2E2722;font-size:12px;font-weight:800;letter-spacing:0.08em;padding:5px 10px;border-radius:999px;pointer-events:none">POSLE</span></div>
+          <div style="aspect-ratio:3/4;position:relative"><image-slot id="story2-after" src="uploads/SaveClip.App_722336682_18102269480026209_7263645319086635952_n.jpg" radius="18" placeholder="Posle: sa svojim ljudima"></image-slot><span style="position:absolute;top:10px;left:10px;background:#A9CBA1;color:#2E2722;font-size:12px;font-weight:800;letter-spacing:0.08em;padding:5px 10px;border-radius:999px;pointer-events:none">POSLE</span></div>
         </div>
         <div style="display:flex;flex-direction:column;gap:12px;padding:8px">
           <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:28px">Borka</h3>
@@ -357,7 +357,7 @@ input:focus{outline:2px solid #E9935A;outline-offset:1px}
       <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:28px 44px;align-items:center;background:#FFFAF4;border:1px solid #EFE5DA;border-radius:28px;padding:clamp(14px,3vw,24px)">
         <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
           <div style="aspect-ratio:3/4;position:relative"><image-slot id="story3-before" radius="18" placeholder="Pre: pronađena"></image-slot><span style="position:absolute;top:10px;left:10px;background:#3B322C;color:#FFFAF4;font-size:12px;font-weight:800;letter-spacing:0.08em;padding:5px 10px;border-radius:999px;pointer-events:none">PRE</span></div>
-          <div style="aspect-ratio:3/4;position:relative"><image-slot id="story3-after" radius="18" placeholder="Posle: kod kuće"></image-slot><span style="position:absolute;top:10px;left:10px;background:#A9CBA1;color:#2E2722;font-size:12px;font-weight:800;letter-spacing:0.08em;padding:5px 10px;border-radius:999px;pointer-events:none">POSLE</span></div>
+          <div style="aspect-ratio:3/4;position:relative"><image-slot id="story3-after" src="uploads/azro.jpg" radius="18" placeholder="Posle: kod kuće"></image-slot><span style="position:absolute;top:10px;left:10px;background:#A9CBA1;color:#2E2722;font-size:12px;font-weight:800;letter-spacing:0.08em;padding:5px 10px;border-radius:999px;pointer-events:none">POSLE</span></div>
         </div>
         <div style="display:flex;flex-direction:column;gap:12px;padding:8px">
           <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:28px">Azra</h3>
@@ -435,11 +435,11 @@ class Component extends DCLogic {
   };
   names = ['Gala', 'Mila', 'Diksi', 'Bela', 'Lari', 'Vasa', 'Žuća', 'Sivko'];
   gallerySrc = {
-    0: ['', 'uploads/1792784523179.jpeg', 'uploads/1792784523238.jpeg', 'uploads/1792784523209.jpeg', 'uploads/1792784523222.jpeg'],
-    1: ['', 'uploads/1000012139.jpg', 'uploads/1000012140.jpg', 'uploads/1000012143.jpg', 'uploads/1000012141.jpg'],
+    0: ['uploads/1792784523194.jpeg', 'uploads/1792784523179.jpeg', 'uploads/1792784523238.jpeg', 'uploads/1792784523209.jpeg', 'uploads/1792784523222.jpeg'],
+    1: ['uploads/1000012145.jpg', 'uploads/1000012139.jpg', 'uploads/1000012140.jpg', 'uploads/1000012143.jpg', 'uploads/1000012141.jpg'],
     2: ['uploads/9d5b885c-c6ea-43be-b05f-f0beece2c599.jpg', 'uploads/7e250c71-20d2-4627-9f81-f0c6433db9ad.jpg', 'uploads/884a5b88-994b-4c40-9b88-9730c8d87690.jpg', 'uploads/a12a7a79-b714-47f3-8f09-18e86b4fc908.jpg', 'uploads/aa8502cd-bcc7-451d-97f9-e56634876876.jpg'],
-    3: ['', 'uploads/f2717fd0-cc65-4492-aae3-1624e20e80b7.jpg', 'uploads/8c88c7c0-8093-4fee-bef6-d1189738d26e.jpg', 'uploads/777642fc-0e25-4eb6-a64a-93b80d91ed59.jpg', 'uploads/899ddf6c-bc72-4dbb-8f87-c54edcf3c690.jpg'],
-    4: ['', 'uploads/1000012173.jpg', 'uploads/1000012174.jpg', 'uploads/1000012178.jpg', 'uploads/1000012176.jpg'],
+    3: ['uploads/eb84248f-7cb2-4254-9c43-9d1c4f3b7180.jpg', 'uploads/f2717fd0-cc65-4492-aae3-1624e20e80b7.jpg', 'uploads/8c88c7c0-8093-4fee-bef6-d1189738d26e.jpg', 'uploads/777642fc-0e25-4eb6-a64a-93b80d91ed59.jpg', 'uploads/899ddf6c-bc72-4dbb-8f87-c54edcf3c690.jpg'],
+    4: ['uploads/1000012175.jpg', 'uploads/1000012173.jpg', 'uploads/1000012174.jpg', 'uploads/1000012178.jpg', 'uploads/1000012176.jpg'],
     5: ['uploads/1000012151.jpg', 'uploads/1000012148.jpg', 'uploads/1000012146.jpg', 'uploads/1000012147.jpg', 'uploads/1000012180.jpg'],
     6: ['uploads/hh.jpg']
   };
