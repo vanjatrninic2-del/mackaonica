@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Mačkaonica - kutak za životinje</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+html,body{overflow-x:clip}
+body{margin:0;background:#FFFAF4;color:#3B322C;font-family:'Nunito Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#B4541F}
+a:hover{color:#3B322C}
+input:focus{outline:2px solid #E9935A;outline-offset:1px}
+</style>
+</helmet>
+
+<header ref="{{ headerRef }}" style="position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,250,244,0.94);backdrop-filter:blur(8px);border-bottom:1px solid #EFE5DA">
+  <div style="max-width:1120px;margin:0 auto;padding:12px clamp(16px,4vw,24px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 32px">
+    <a href="#pocetna" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#3B322C">
+      <img src="uploads/638699163_1224791349806956_50433933860428862_n.jpg" alt="Mačkaonica logo" style="width:52px;height:52px;border-radius:50%;object-fit:cover;display:block"></img>
+      <span style="display:flex;flex-direction:column;line-height:1.1">
+        <span style="font-family:'Young Serif',serif;font-size:20px">Mačkaonica</span>
+        <span style="font-size:12px;color:#7A6E64;letter-spacing:0.02em">kutak za životinje</span>
+      </span>
+    </a>
+    <nav style="display:flex;flex-wrap:nowrap;gap:22px;font-size:15px;font-weight:600;white-space:nowrap;overflow-x:auto;max-width:100%;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px">
+      <a href="#udomljavanje" style="color:#3B322C;text-decoration:none" style-hover="color:#B4541F">Udomljavanje</a>
+      <a href="#sterilizacija" style="color:#3B322C;text-decoration:none" style-hover="color:#B4541F">Zašto sterilizacija</a>
+      <a href="#donacije" style="color:#3B322C;text-decoration:none" style-hover="color:#B4541F">Donacije novca</a>
+      <a href="#oprema" style="color:#3B322C;text-decoration:none" style-hover="color:#B4541F">Donacije hrane i opreme</a>
+      <a href="#srecni" style="color:#3B322C;text-decoration:none" style-hover="color:#B4541F">Srećno udomljeni</a>
+    </nav>
+  </div>
+</header>
+<div style="height:{{ headerH }}px"></div>
+
+<section id="pocetna" style="max-width:1120px;margin:0 auto;padding:clamp(36px,8vw,64px) clamp(16px,4vw,24px) clamp(56px,10vw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:center">
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <span style="align-self:flex-start;background:#E4EFDF;color:#3F6A3B;font-weight:700;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;padding:7px 14px;border-radius:999px">Udomljavanje · Sterilizacija · Briga</span>
+    <h1 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(38px,5.2vw,60px);line-height:1.08;text-wrap:balance">Svaka šapa zaslužuje topao dom</h1>
+    <p style="margin:0;font-size:19px;line-height:1.6;color:#5E544C;max-width:520px;text-wrap:pretty">Na ulici ih čekaju hladne noći, glad i strah. Kod vas ih može čekati ćebe, puna činija i neko ko će ih voleti. Udomite, donirajte ili podelite priču.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px">
+      <a href="#udomljavanje" style="background:#3B322C;color:#FFFAF4;text-decoration:none;font-weight:700;padding:15px 26px;border-radius:999px;font-size:16px" style-hover="background:#56483F">Upoznaj šapice</a>
+      <a href="#donacije" style="background:#F4B183;color:#3B322C;text-decoration:none;font-weight:700;padding:15px 26px;border-radius:999px;font-size:16px" style-hover="background:#EE9E68">Doniraj za sterilizaciju</a>
+    </div>
+    <div style="display:flex;gap:12px">
+          <a href="https://www.instagram.com/mackaonica/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)" style-hover="transform:translateY(-2px)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="#fff" stroke="none"></circle></svg></a>
+          <a href="https://www.facebook.com/sapicetrazedom" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#1877F2" style-hover="transform:translateY(-2px)"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21h3z"></path></svg></a>
+        </div>
+  </div>
+  <div style="position:relative;aspect-ratio:5/4">
+    <div style="position:absolute;inset:6% 0 -6% 8%;background:#E4EFDF;border-radius:36px"></div>
+    <div style="position:absolute;inset:0;left:6%;right:0">
+      <image-slot id="hero" shape="rounded" radius="32" placeholder="Fotografija: maca i kuca u skloništu"></image-slot>
+    </div>
+  </div>
+</section>
+
+<section id="udomljavanje" style="background:#FFFFFF;border-top:1px solid #EFE5DA;border-bottom:1px solid #EFE5DA">
+  <div style="max-width:1120px;margin:0 auto;padding:clamp(56px,10vw,88px) clamp(16px,4vw,24px)">
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:44px;max-width:640px">
+      <span style="color:#B4541F;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Udomi me</span>
+      <h2 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(30px,3.6vw,42px);line-height:1.15;text-wrap:balance">Upoznajte naše šapice koje traže dom</h2>
+      <a href="https://www.facebook.com/sapicetrazedom" target="_blank" rel="noopener" style="color:#B4541F;font-weight:700;font-size:16px;text-decoration:underline;text-underline-offset:4px" style-hover="color:#3B322C">Sve šapice koje traže dom pratite na našoj Facebook stranici →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:20px">
+      <article style="background:#FFFAF4;border:1px solid #EFE5DA;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-1" shape="rect" placeholder="Glavna slika: Gala"></image-slot>
+          <button type="button" onClick="{{ open1 }}" style="position:absolute;right:10px;bottom:10px;font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border:none;border-radius:999px;background:rgba(255,250,244,0.94);color:#3B322C;cursor:pointer;box-shadow:0 4px 12px -6px rgba(59,50,44,0.4)" style-hover="background:#FFFFFF">Sve slike · 5</button>
+        </div>
+        <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1">
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:23px">Gala</h3>
+            <span style="color:#7A6E64;font-size:14px;font-weight:600">Maca · 2 godine · ženka</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="background:#E4EFDF;color:#3F6A3B;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">✓ Vakcinisana</span><span style="background:#E4EFDF;color:#3F6A3B;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">✓ Sterilisana</span><span style="background:#FDE8D7;color:#8F431A;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">Mazna i mirna</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:#5E544C;text-wrap:pretty">Pronađena u kutiji ispred prodavnice, pokisla i uplašena. Danas obožava da prede u krilu i spava na suncu.</p>
+          <a href="https://m.me/sapicetrazedom" target="_blank" rel="noopener" style="margin-top:auto;align-self:flex-start;background:#3B322C;color:#FFFAF4;text-decoration:none;font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px" style-hover="background:#56483F">Želim da udomim Galu</a>
+        </div>
+      </article>
+      <article style="background:#FFFAF4;border:1px solid #EFE5DA;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-2" shape="rect" placeholder="Glavna slika: Mila"></image-slot>
+          <button type="button" onClick="{{ open2 }}" style="position:absolute;right:10px;bottom:10px;font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border:none;border-radius:999px;background:rgba(255,250,244,0.94);color:#3B322C;cursor:pointer;box-shadow:0 4px 12px -6px rgba(59,50,44,0.4)" style-hover="background:#FFFFFF">Sve slike · 5</button>
+        </div>
+        <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1">
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:23px">Mila</h3>
+            <span style="color:#7A6E64;font-size:14px;font-weight:600">Kuca · 4 godine · mužjak</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="background:#E4EFDF;color:#3F6A3B;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">✓ Vakcinisan</span><span style="background:#E4EFDF;color:#3F6A3B;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">✓ Kastriran</span><span style="background:#FDE8D7;color:#8F431A;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">Razigran i odan</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:#5E544C;text-wrap:pretty">Dve zime je proveo pored autoputa, a i dalje maše repom svakom ko mu priđe. Voli duge šetnje i decu.</p>
+          <a href="https://m.me/sapicetrazedom" target="_blank" rel="noopener" style="margin-top:auto;align-self:flex-start;background:#3B322C;color:#FFFAF4;text-decoration:none;font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px" style-hover="background:#56483F">Želim da udomim Milu</a>
+        </div>
+      </article>
+      <article style="background:#FFFAF4;border:1px solid #EFE5DA;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-3" src="uploads/9d5b885c-c6ea-43be-b05f-f0beece2c599.jpg" shape="rect" placeholder="Glavna slika: Diksi"></image-slot>
+          <button type="button" onClick="{{ open3 }}" style="position:absolute;right:10px;bottom:10px;font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border:none;border-radius:999px;background:rgba(255,250,244,0.94);color:#3B322C;cursor:pointer;box-shadow:0 4px 12px -6px rgba(59,50,44,0.4)" style-hover="background:#FFFFFF">Sve slike · 5</button>
+        </div>
+        <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1">
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:23px">Diksi</h3>
+            <span style="color:#7A6E64;font-size:14px;font-weight:600">Mače · 5 meseci · mužjak</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="background:#E4EFDF;color:#3F6A3B;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">✓ Vakcinisan</span><span style="background:#F3EEE8;color:#6E655E;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">Kastracija zakazana</span><span style="background:#FDE8D7;color:#8F431A;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">Radoznao nestaško</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:#5E544C;text-wrap:pretty">Jedini preživeli iz legla rođenog u podrumu. Juri svaku vunicu i penje se na sve što stigne.</p>
+          <a href="https://m.me/sapicetrazedom" target="_blank" rel="noopener" style="margin-top:auto;align-self:flex-start;background:#3B322C;color:#FFFAF4;text-decoration:none;font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px" style-hover="background:#56483F">Želim da udomim Diksija</a>
+        </div>
+      </article>
+      <article style="background:#FFFAF4;border:1px solid #EFE5DA;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-4" shape="rect" placeholder="Glavna slika: Bela"></image-slot>
+          <button type="button" onClick="{{ open4 }}" style="position:absolute;right:10px;bottom:10px;font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border:none;border-radius:999px;background:rgba(255,250,244,0.94);color:#3B322C;cursor:pointer;box-shadow:0 4px 12px -6px rgba(59,50,44,0.4)" style-hover="background:#FFFFFF">Sve slike · 5</button>
+        </div>
+        <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1">
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:23px">Bela</h3>
+            <span style="color:#7A6E64;font-size:14px;font-weight:600">Kuca · 1 godina · ženka</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="background:#E4EFDF;color:#3F6A3B;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">✓ Vakcinisana</span><span style="background:#E4EFDF;color:#3F6A3B;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">✓ Sterilisana</span><span style="background:#FDE8D7;color:#8F431A;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">Nežna i stidljiva</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:#5E544C;text-wrap:pretty">Pronađena sa povređenom šapom. Treba joj malo vremena da se opusti, a zauzvrat daje bezgraničnu ljubav.</p>
+          <a href="https://m.me/sapicetrazedom" target="_blank" rel="noopener" style="margin-top:auto;align-self:flex-start;background:#3B322C;color:#FFFAF4;text-decoration:none;font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px" style-hover="background:#56483F">Želim da udomim Belu</a>
+        </div>
+      </article>
+      <article style="background:#FFFAF4;border:1px solid #EFE5DA;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-5" shape="rect" placeholder="Glavna slika: Lari"></image-slot>
+          <button type="button" onClick="{{ open5 }}" style="position:absolute;right:10px;bottom:10px;font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border:none;border-radius:999px;background:rgba(255,250,244,0.94);color:#3B322C;cursor:pointer;box-shadow:0 4px 12px -6px rgba(59,50,44,0.4)" style-hover="background:#FFFFFF">Sve slike · 5</button>
+        </div>
+        <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1">
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:23px">Lari</h3>
+            <span style="color:#7A6E64;font-size:14px;font-weight:600">Kuca · 3 godine · mužjak</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="background:#E4EFDF;color:#3F6A3B;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">✓ Vakcinisan</span><span style="background:#E4EFDF;color:#3F6A3B;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">✓ Kastriran</span><span style="background:#FDE8D7;color:#8F431A;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">Miran i pametan</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:#5E544C;text-wrap:pretty">Godinama je čuvao napušteno gradilište. Zna osnovne komande i najsrećniji je kad je pored svog čoveka.</p>
+          <a href="https://m.me/sapicetrazedom" target="_blank" rel="noopener" style="margin-top:auto;align-self:flex-start;background:#3B322C;color:#FFFAF4;text-decoration:none;font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px" style-hover="background:#56483F">Želim da udomim Larija</a>
+        </div>
+      </article>
+      <article style="background:#FFFAF4;border:1px solid #EFE5DA;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-6" src="uploads/1000012151.jpg" shape="rect" placeholder="Glavna slika: Vasa"></image-slot>
+          <button type="button" onClick="{{ open6 }}" style="position:absolute;right:10px;bottom:10px;font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border:none;border-radius:999px;background:rgba(255,250,244,0.94);color:#3B322C;cursor:pointer;box-shadow:0 4px 12px -6px rgba(59,50,44,0.4)" style-hover="background:#FFFFFF">Sve slike · 5</button>
+        </div>
+        <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1">
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:23px">Vasa</h3>
+            <span style="color:#7A6E64;font-size:14px;font-weight:600">Maca · 6 godina · ženka</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="background:#E4EFDF;color:#3F6A3B;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">✓ Vakcinisana</span><span style="background:#E4EFDF;color:#3F6A3B;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">✓ Sterilisana</span><span style="background:#FDE8D7;color:#8F431A;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">Dostojanstvena dama</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:#5E544C;text-wrap:pretty">Ostala je sama kada se njena vlasnica odselila. Voli tišinu, meke jastuke i jutarnje maženje.</p>
+          <a href="https://m.me/sapicetrazedom" target="_blank" rel="noopener" style="margin-top:auto;align-self:flex-start;background:#3B322C;color:#FFFAF4;text-decoration:none;font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px" style-hover="background:#56483F">Želim da udomim Vasu</a>
+        </div>
+      </article>
+      <article style="background:#FFFAF4;border:1px solid #EFE5DA;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-7" src="uploads/hh.jpg" shape="rect" placeholder="Glavna slika: Žuća"></image-slot>
+          <button type="button" onClick="{{ open7 }}" style="position:absolute;right:10px;bottom:10px;font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border:none;border-radius:999px;background:rgba(255,250,244,0.94);color:#3B322C;cursor:pointer;box-shadow:0 4px 12px -6px rgba(59,50,44,0.4)" style-hover="background:#FFFFFF">Sve slike · 5</button>
+        </div>
+        <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1">
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:23px">Žuća</h3>
+            <span style="color:#7A6E64;font-size:14px;font-weight:600">Kuca · 8 meseci · ženka</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="background:#E4EFDF;color:#3F6A3B;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">✓ Vakcinisana</span><span style="background:#F3EEE8;color:#6E655E;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">Sterilizacija zakazana</span><span style="background:#FDE8D7;color:#8F431A;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">Vesela i energična</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:#5E544C;text-wrap:pretty">Rođena na ulici, ali od prvog dana veruje ljudima. Traži aktivnu porodicu i dvorište za trčanje.</p>
+          <a href="https://m.me/sapicetrazedom" target="_blank" rel="noopener" style="margin-top:auto;align-self:flex-start;background:#3B322C;color:#FFFAF4;text-decoration:none;font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px" style-hover="background:#56483F">Želim da udomim Žuću</a>
+        </div>
+      </article>
+      <article style="background:#FFFAF4;border:1px solid #EFE5DA;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+        <div style="aspect-ratio:4/3;position:relative"><image-slot id="animal-8" shape="rect" placeholder="Glavna slika: Sivko"></image-slot>
+          <button type="button" onClick="{{ open8 }}" style="position:absolute;right:10px;bottom:10px;font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border:none;border-radius:999px;background:rgba(255,250,244,0.94);color:#3B322C;cursor:pointer;box-shadow:0 4px 12px -6px rgba(59,50,44,0.4)" style-hover="background:#FFFFFF">Sve slike · 5</button>
+        </div>
+        <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1">
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:23px">Sivko</h3>
+            <span style="color:#7A6E64;font-size:14px;font-weight:600">Maca · 3 godine · mužjak</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px"><span style="background:#E4EFDF;color:#3F6A3B;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">✓ Vakcinisan</span><span style="background:#E4EFDF;color:#3F6A3B;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">✓ Kastriran</span><span style="background:#FDE8D7;color:#8F431A;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px">Druželjubiv i pričljiv</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:#5E544C;text-wrap:pretty">Dolazio je pod prozor volonterke svake večeri dok nije shvatio da je bezbedan. Slaže se sa drugim macama.</p>
+          <a href="https://m.me/sapicetrazedom" target="_blank" rel="noopener" style="margin-top:auto;align-self:flex-start;background:#3B322C;color:#FFFAF4;text-decoration:none;font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px" style-hover="background:#56483F">Želim da udomim Sivka</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="sterilizacija" style="max-width:1120px;margin:0 auto;padding:clamp(56px,10vw,96px) clamp(16px,4vw,24px)">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px 64px;align-items:start;margin-bottom:56px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="color:#3F6A3B;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Važnost sterilizacije</span>
+      <h2 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(30px,3.6vw,42px);line-height:1.15;text-wrap:balance">Zašto je sterilizacija ključna?</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;font-size:17px;line-height:1.65;color:#5E544C">
+      <p style="margin:0;text-wrap:pretty">Skloništa su puna, a na ulicama se svake godine rađaju hiljade mačića i štenaca koji ne dočekaju svoj prvi rođendan. Udomljavanje spašava pojedinačne živote, ali jedino sterilizacija zaustavlja krug patnje u korenu.</p>
+      <p style="margin:0;text-wrap:pretty">Sterilisane životinje su zdravije i mirnije: manji je rizik od tumora i infekcija, manje lutaju i manje se tuku. Jedna intervencija znači da se na ulici neće roditi desetine novih legla.</p>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px">
+    <div style="background:#F4B183;border-radius:24px;padding:30px 26px;display:flex;flex-direction:column;gap:10px">
+      <span style="font-family:'Young Serif',serif;font-size:clamp(40px,4.4vw,54px);line-height:1">370.000</span>
+      <span style="font-size:16px;line-height:1.5;font-weight:600;color:#3B322C">mačića za 7 godina može poteći od samo jedne nesterilisane mačke i njenog potomstva</span>
+    </div>
+    <div style="background:#A9CBA1;border-radius:24px;padding:30px 26px;display:flex;flex-direction:column;gap:10px">
+      <span style="font-family:'Young Serif',serif;font-size:clamp(40px,4.4vw,54px);line-height:1">67.000</span>
+      <span style="font-size:16px;line-height:1.5;font-weight:600;color:#2E2722">štenaca za 6 godina može poteći od jedne nesterilisane kuce i njenih potomaka</span>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #EFE5DA;border-radius:24px;padding:30px 26px;display:flex;flex-direction:column;gap:10px">
+      <span style="font-family:'Young Serif',serif;font-size:clamp(40px,4.4vw,54px);line-height:1">3 legla</span>
+      <span style="font-size:16px;line-height:1.5;font-weight:600;color:#5E544C">godišnje može imati mačka, sa 4 do 6 mačića u svakom</span>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #EFE5DA;border-radius:24px;padding:30px 26px;display:flex;flex-direction:column;gap:10px">
+      <span style="font-family:'Young Serif',serif;font-size:clamp(40px,4.4vw,54px);line-height:1">4 meseca</span>
+      <span style="font-size:16px;line-height:1.5;font-weight:600;color:#5E544C">je dovoljno da mlada mačka postane sposobna za razmnožavanje</span>
+    </div>
+  </div>
+  <p style="margin:16px 0 0;font-size:13px;line-height:1.5;color:#7A6E64;max-width:760px">Izvor: procene koje navode međunarodne organizacije za zaštitu životinja (npr. PETA, The Humane Society). Brojke su teorijske i pretpostavljaju da svi potomci prežive i nastave da se razmnožavaju.</p>
+
+  <div style="margin-top:72px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px 48px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-family:'Young Serif',serif;font-size:clamp(56px,7vw,84px);line-height:1;color:#3F6A3B">1.240</span>
+      <p style="margin:0;font-size:19px;line-height:1.55;font-weight:600;text-wrap:pretty">životinja je već sterilisano</p>
+      <p style="margin:0;font-size:16px;line-height:1.6;color:#5E544C;text-wrap:pretty">To su hiljade legla koja se nikada neće roditi na hladnom asfaltu. Svaka maca i kuca na ovim fotografijama vraćena je na sigurno – zdrava, zbrinuta i obeležena.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+      <div style="aspect-ratio:1/1;position:relative"><image-slot id="steril-1" radius="18" placeholder="Akcija sterilizacije"></image-slot></div>
+      <div style="aspect-ratio:1/1;position:relative"><image-slot id="steril-2" radius="18" placeholder="Oporavak posle intervencije"></image-slot></div>
+      <div style="aspect-ratio:1/1;position:relative"><image-slot id="steril-3" radius="18" placeholder="Volonteri na terenu"></image-slot></div>
+      <div style="aspect-ratio:1/1;position:relative"><image-slot id="steril-4" radius="18" placeholder="Vraćeni u koloniju"></image-slot></div>
+    </div>
+  </div>
+</section>
+
+<section id="donacije" style="background:#E4EFDF">
+  <div style="max-width:1120px;margin:0 auto;padding:clamp(56px,10vw,96px) clamp(16px,4vw,24px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="color:#3F6A3B;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Podržite naše akcije</span>
+      <h2 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(30px,3.6vw,42px);line-height:1.15;text-wrap:balance">Uplatite donaciju za sterilizaciju uličnih životinja</h2>
+      <p style="margin:0;font-size:17px;line-height:1.65;color:#4A5A46;text-wrap:pretty">Svaka uplata direktno pokriva troškove intervencije, lekova i oporavka. Jedna sterilisana maca znači da se na ulici neće roditi desetine mačića osuđenih na glad, bolest i hladnoću. Vaš doprinos sprečava patnju pre nego što počne.</p>
+      <p style="margin:0;font-size:17px;line-height:1.65;color:#4A5A46;text-wrap:pretty">Nijedna donacija nije premala. I 100 dinara kada se sabere sa tuđim postaje mnogo za one kojima najviše treba. Naši volonteri već sada izdvajaju od svog novca za sterilizacije, jer ne mogu da okrenu glavu od onih kojima je pomoć potrebna. Svaka vaša uplata znači da ovaj teret ne nose sami.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px;font-size:16px;color:#3B322C">
+        <div style="display:flex;gap:12px;align-items:baseline"><strong style="min-width:110px">{{ tierA }}</strong><span style="color:#4A5A46">lekovi i nega posle operacije</span></div>
+        <div style="display:flex;gap:12px;align-items:baseline"><strong style="min-width:110px">{{ tierB }}</strong><span style="color:#4A5A46">sterilizacija jedne mace</span></div>
+        <div style="display:flex;gap:12px;align-items:baseline"><strong style="min-width:110px">{{ tierC }}</strong><span style="color:#4A5A46">sterilizacija jedne kuce</span></div>
+      </div>
+    </div>
+
+    <div style="background:#FFFFFF;border-radius:28px;padding:clamp(22px,5vw,34px) clamp(18px,5vw,32px);box-shadow:0 20px 50px -30px rgba(59,50,44,0.35)">
+      <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:18px" noValidate="{{ true }}">
+          <label style="display:flex;flex-direction:column;gap:7px;font-weight:700;font-size:14px">Ime i prezime
+            <input type="text" value="{{ name }}" onChange="{{ onName }}" placeholder="npr. Ana Petrović" style="font:inherit;font-weight:400;font-size:16px;padding:13px 15px;border:1.5px solid #E5DACE;border-radius:12px;background:#FFFAF4;color:#3B322C"></input>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:7px;font-weight:700;font-size:14px">Email adresa
+            <input type="email" value="{{ email }}" onChange="{{ onEmail }}" placeholder="ana@primer.rs" style="font:inherit;font-weight:400;font-size:16px;padding:13px 15px;border:1.5px solid #E5DACE;border-radius:12px;background:#FFFAF4;color:#3B322C"></input>
+          </label>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-weight:700;font-size:14px">Iznos donacije ({{ currency }})</span>
+            <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px">
+              <sc-for list="{{ presets }}" as="p" hint-placeholder-count="4">
+                <button type="button" onClick="{{ p.pick }}" style="font:inherit;font-weight:700;font-size:15px;padding:11px 4px;border-radius:12px;cursor:pointer;border:1.5px solid {{ p.border }};background:{{ p.bg }};color:#3B322C">{{ p.label }}</button>
+              </sc-for>
+            </div>
+            <input type="number" min="1" value="{{ amount }}" onChange="{{ onAmount }}" placeholder="Drugi iznos" style="font:inherit;font-size:16px;padding:13px 15px;border:1.5px solid #E5DACE;border-radius:12px;background:#FFFAF4;color:#3B322C"></input>
+          </div>
+          <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:0;color:#A33B1E;font-size:14px;font-weight:600">{{ error }}</p>
+          </sc-if>
+          <button type="submit" style="font:inherit;font-weight:800;font-size:17px;padding:16px;border:none;border-radius:999px;background:#3B322C;color:#FFFAF4;cursor:pointer" style-hover="background:#56483F">Doniraj sada</button>
+          <p style="margin:0;font-size:13px;color:#7A6E64;text-align:center">Ovo je simulacija uplate. Nijedna kartica neće biti zadužena.</p>
+        </form>
+      </sc-if>
+      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start;padding:12px 0">
+          <span style="width:56px;height:56px;border-radius:50%;background:#A9CBA1;display:grid;place-items:center;font-size:26px">✓</span>
+          <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:28px;line-height:1.2">Hvala, {{ firstName }}!</h3>
+          <p style="margin:0;font-size:17px;line-height:1.6;color:#5E544C">Vaša donacija od <strong>{{ amountLabel }}</strong> je zabeležena. Potvrdu ćemo poslati na <strong>{{ email }}</strong>. Zajedno sprečavamo nove patnje na ulici.</p>
+          <button type="button" onClick="{{ reset }}" style="font:inherit;font-weight:700;font-size:15px;padding:12px 20px;border:1.5px solid #3B322C;border-radius:999px;background:transparent;color:#3B322C;cursor:pointer">Nova donacija</button>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<section id="oprema" style="max-width:1120px;margin:0 auto;padding:clamp(56px,10vw,96px) clamp(16px,4vw,24px)">
+  <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:40px;max-width:640px">
+    <span style="color:#B4541F;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Šta nam je još potrebno?</span>
+    <h2 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(30px,3.6vw,42px);line-height:1.15">Kako još možete pomoći?</h2>
+    <p style="margin:0;font-size:17px;line-height:1.6;color:#5E544C;text-wrap:pretty">Materijalne donacije možete doneti lično ili poslati poštom. Javite nam se pre slanja kako bismo znali šta nam najviše treba.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px">
+    <div style="background:#FFFFFF;border:1px solid #EFE5DA;border-radius:22px;padding:clamp(18px,4vw,26px);display:flex;gap:clamp(14px,3vw,18px);align-items:flex-start">
+      <img src="assets/ikonice/hrana-256.png" alt="" style="flex:none;width:72px;height:72px;border-radius:18px;object-fit:cover;display:block"></img>
+      <div style="display:flex;flex-direction:column;gap:4px"><h3 style="margin:0;font-size:18px;font-weight:800">Hrana</h3><p style="margin:0;font-size:15px;line-height:1.5;color:#5E544C">Suva i vlažna hrana za kuce i mace.</p></div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #EFE5DA;border-radius:22px;padding:clamp(18px,4vw,26px);display:flex;gap:clamp(14px,3vw,18px);align-items:flex-start">
+      <img src="assets/ikonice/pesak-256.png" alt="" style="flex:none;width:72px;height:72px;border-radius:18px;object-fit:cover;display:block"></img>
+      <div style="display:flex;flex-direction:column;gap:4px"><h3 style="margin:0;font-size:18px;font-weight:800">Pesak za mace</h3><p style="margin:0;font-size:15px;line-height:1.5;color:#5E544C">Grudvajući ili silikonski pesak – trošimo ga svakog dana.</p></div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #EFE5DA;border-radius:22px;padding:clamp(18px,4vw,26px);display:flex;gap:clamp(14px,3vw,18px);align-items:flex-start">
+      <img src="assets/ikonice/cinije-256.png" alt="" style="flex:none;width:72px;height:72px;border-radius:18px;object-fit:cover;display:block"></img>
+      <div style="display:flex;flex-direction:column;gap:4px"><h3 style="margin:0;font-size:18px;font-weight:800">Činije za hranu i vodu</h3><p style="margin:0;font-size:15px;line-height:1.5;color:#5E544C">Keramičke, metalne ili plastične činije koje se lako peru.</p></div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #EFE5DA;border-radius:22px;padding:clamp(18px,4vw,26px);display:flex;gap:clamp(14px,3vw,18px);align-items:flex-start">
+      <img src="assets/ikonice/igracke-256.png" alt="" style="flex:none;width:72px;height:72px;border-radius:18px;object-fit:cover;display:block"></img>
+      <div style="display:flex;flex-direction:column;gap:4px"><h3 style="margin:0;font-size:18px;font-weight:800">Igračke</h3><p style="margin:0;font-size:15px;line-height:1.5;color:#5E544C">Loptice, plišane igračke i sve čime kuce i mace vole da se igraju.</p></div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #EFE5DA;border-radius:22px;padding:clamp(18px,4vw,26px);display:flex;gap:clamp(14px,3vw,18px);align-items:flex-start">
+      <img src="assets/ikonice/penjalice-256.png" alt="" style="flex:none;width:72px;height:72px;border-radius:18px;object-fit:cover;display:block"></img>
+      <div style="display:flex;flex-direction:column;gap:4px"><h3 style="margin:0;font-size:18px;font-weight:800">Penjalice i grebalice</h3><p style="margin:0;font-size:15px;line-height:1.5;color:#5E544C">Da mace imaju gde da se penju, igraju i oštre nokte.</p></div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #EFE5DA;border-radius:22px;padding:clamp(18px,4vw,26px);display:flex;gap:clamp(14px,3vw,18px);align-items:flex-start">
+      <img src="assets/ikonice/cebici-256.png" alt="" style="flex:none;width:72px;height:72px;border-radius:18px;object-fit:cover;display:block"></img>
+      <div style="display:flex;flex-direction:column;gap:4px"><h3 style="margin:0;font-size:18px;font-weight:800">Ćebići i prostirke</h3><p style="margin:0;font-size:15px;line-height:1.5;color:#5E544C">Topla ćebad, peškiri i jastučići za hladne noći.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="srecni" style="background:#FFFFFF;border-top:1px solid #EFE5DA">
+  <div style="max-width:1120px;margin:0 auto;padding:clamp(56px,10vw,96px) clamp(16px,4vw,24px)">
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:44px;max-width:640px">
+      <span style="color:#3F6A3B;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Srećno udomljeni</span>
+      <h2 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(30px,3.6vw,42px);line-height:1.15">Oni su pronašli svoju porodicu</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:28px">
+
+      <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:28px 44px;align-items:center;background:#FFFAF4;border:1px solid #EFE5DA;border-radius:28px;padding:clamp(14px,3vw,24px)">
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+          <div style="aspect-ratio:3/4;position:relative"><image-slot id="story1-before" src="uploads/857963122_1427096122909810_5744925714368932436_n.jpg" radius="18" placeholder="Pre: na ulici"></image-slot><span style="position:absolute;top:10px;left:10px;background:#3B322C;color:#FFFAF4;font-size:12px;font-weight:800;letter-spacing:0.08em;padding:5px 10px;border-radius:999px;pointer-events:none">PRE</span></div>
+          <div style="aspect-ratio:3/4;position:relative"><image-slot id="story1-after" src="uploads/856757550_1427096119576477_1682339655376233882_n.jpg" radius="18" placeholder="Posle: u novom domu"></image-slot><span style="position:absolute;top:10px;left:10px;background:#A9CBA1;color:#2E2722;font-size:12px;font-weight:800;letter-spacing:0.08em;padding:5px 10px;border-radius:999px;pointer-events:none">POSLE</span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;padding:8px">
+          <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:28px">Lacio</h3>
+          <p style="margin:0;font-size:17px;line-height:1.65;color:#5E544C;text-wrap:pretty">Pronašli smo ga mršavog i prozeblog ispod parkiranog automobila. Danas spava na jastuku između svoje dve devojčice i svako jutro ih ispraća do vrata. Porodica kaže da ne znaju kako su živeli bez njega.</p>
+          <span style="font-size:14px;font-weight:700;color:#3F6A3B">Udomljen u martu · Novi Sad</span>
+        </div>
+      </article>
+
+      <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:28px 44px;align-items:center;background:#FFFAF4;border:1px solid #EFE5DA;border-radius:28px;padding:clamp(14px,3vw,24px)">
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+          <div style="aspect-ratio:3/4;position:relative"><image-slot id="story2-before" radius="18" placeholder="Pre: u skloništu"></image-slot><span style="position:absolute;top:10px;left:10px;background:#3B322C;color:#FFFAF4;font-size:12px;font-weight:800;letter-spacing:0.08em;padding:5px 10px;border-radius:999px;pointer-events:none">PRE</span></div>
+          <div style="aspect-ratio:3/4;position:relative"><image-slot id="story2-after" radius="18" placeholder="Posle: sa svojim ljudima"></image-slot><span style="position:absolute;top:10px;left:10px;background:#A9CBA1;color:#2E2722;font-size:12px;font-weight:800;letter-spacing:0.08em;padding:5px 10px;border-radius:999px;pointer-events:none">POSLE</span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;padding:8px">
+          <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:28px">Borka</h3>
+          <p style="margin:0;font-size:17px;line-height:1.65;color:#5E544C;text-wrap:pretty">Medo je u skloništu proveo gotovo tri godine. Bio je stariji, krupan i tih, pa su ga mnogi zaobilazili. Onda je stigao jedan penzioner koji je tražio društvo za jutarnje šetnje. Sada su nerazdvojni.</p>
+          <span style="font-size:14px;font-weight:700;color:#3F6A3B">Udomljen u junu · Beograd</span>
+        </div>
+      </article>
+
+      <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:28px 44px;align-items:center;background:#FFFAF4;border:1px solid #EFE5DA;border-radius:28px;padding:clamp(14px,3vw,24px)">
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+          <div style="aspect-ratio:3/4;position:relative"><image-slot id="story3-before" radius="18" placeholder="Pre: pronađena"></image-slot><span style="position:absolute;top:10px;left:10px;background:#3B322C;color:#FFFAF4;font-size:12px;font-weight:800;letter-spacing:0.08em;padding:5px 10px;border-radius:999px;pointer-events:none">PRE</span></div>
+          <div style="aspect-ratio:3/4;position:relative"><image-slot id="story3-after" radius="18" placeholder="Posle: kod kuće"></image-slot><span style="position:absolute;top:10px;left:10px;background:#A9CBA1;color:#2E2722;font-size:12px;font-weight:800;letter-spacing:0.08em;padding:5px 10px;border-radius:999px;pointer-events:none">POSLE</span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;padding:8px">
+          <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:28px">Azra</h3>
+          <p style="margin:0;font-size:17px;line-height:1.65;color:#5E544C;text-wrap:pretty">Azra uzeta jedne kišne noći, od tad nije izašla iz kuće, klasična kućna buva. U slobodno vreme drema pored peći i grejalica, noću spava isključivo na jastuku, krade gumice za kosu, jede slušalice i donosi loptice kao pravi ker.<br><br>Hobi-bije svog brata pukija i ne da mu mira<br>Omiljena hrana-granule preko 1000din<br>Mana-hrče kao deda<br>Strah-njen brat Laki koj voli da je muči a ona beži kod mame i posle tuče plače</p>
+          <span style="font-size:14px;font-weight:700;color:#3F6A3B">Udomljene u septembru · Kragujevac</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<footer id="kontakt" style="background:#3B322C;color:#EFE5DA">
+  <div style="max-width:1120px;margin:0 auto;padding:clamp(48px,9vw,72px) clamp(16px,4vw,24px) 32px;display:flex;flex-direction:column;gap:48px">
+    <p style="margin:0;font-family:'Young Serif',serif;font-size:clamp(26px,3.2vw,36px);line-height:1.3;color:#FFFAF4;max-width:760px;text-wrap:balance">Hvala vam što ste svratili. Svaki deljeni post, svaka donacija i svako udomljavanje vraća nadu jednom malom srcu.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:32px">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#F4B183">O nama</span>
+        <p style="margin:0;font-size:15px;line-height:1.6">Mačkaonica - kutak za životinje je volonterska organizacija koja zbrinjava, leči, steriliše i udomljava napuštene kuce i mace.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:15px">
+        <span style="font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#F4B183">Pratite nas</span>
+        <div style="display:flex;gap:12px">
+          <a href="https://www.instagram.com/mackaonica/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)" style-hover="transform:translateY(-2px)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="#fff" stroke="none"></circle></svg></a>
+          <a href="https://www.facebook.com/sapicetrazedom" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#1877F2" style-hover="transform:translateY(-2px)"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21h3z"></path></svg></a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(239,229,218,0.18);padding-top:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13px;color:#BFB3A7">
+      <span>© 2026 Mačkaonica - kutak za životinje</span>
+      <span>Napravljeno s ljubavlju prema svakoj šapi</span>
+    </div>
+  </div>
+</footer>
+<sc-if value="{{ galleryOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeGallery }}" style="position:fixed;inset:0;z-index:50;background:rgba(43,36,31,0.78);display:grid;place-items:center;padding:20px">
+    <div onClick="{{ stop }}" style="width:min(100%,860px);background:#FFFAF4;border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <div style="display:flex;align-items:baseline;gap:12px">
+          <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:26px">{{ galleryName }}</h3>
+          <span style="font-size:14px;font-weight:700;color:#7A6E64">{{ photoLabel }}</span>
+        </div>
+        <button type="button" onClick="{{ closeGallery }}" aria-label="Zatvori" style="width:40px;height:40px;border-radius:50%;border:1.5px solid #E5DACE;background:#FFFFFF;font:inherit;font-size:20px;line-height:1;color:#3B322C;cursor:pointer">×</button>
+      </div>
+      <div style="position:relative;aspect-ratio:3/2">
+        <sc-for list="{{ photos }}" as="p" hint-placeholder-count="1">
+          <div style="position:absolute;inset:0;display:{{ p.display }}"><image-slot id="{{ p.id }}" src="{{ p.src }}" fit="{{ p.fit }}" radius="16" placeholder="{{ p.ph }}"></image-slot></div>
+        </sc-for>
+        <button type="button" onClick="{{ prev }}" aria-label="Prethodna" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,250,244,0.94);font:inherit;font-size:22px;color:#3B322C;cursor:pointer">‹</button>
+        <button type="button" onClick="{{ next }}" aria-label="Sledeća" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,250,244,0.94);font:inherit;font-size:22px;color:#3B322C;cursor:pointer">›</button>
+      </div>
+      <div style="display:flex;justify-content:center;gap:8px">
+        <sc-for list="{{ photos }}" as="p" hint-placeholder-count="5">
+          <button type="button" onClick="{{ p.go }}" aria-label="Slika" style="width:{{ p.dotW }};height:10px;border-radius:999px;border:none;padding:0;background:{{ p.dotBg }};cursor:pointer"></button>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;currency&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;RSD&quot;,&quot;EUR&quot;],&quot;default&quot;:&quot;RSD&quot;,&quot;tsType&quot;:&quot;'RSD'|'EUR'&quot;}}">
+class Component extends DCLogic {
+  state = { name: '', email: '', amount: '', submitted: false, error: '' };
+  fmt(n) {
+    const c = this.props.currency ?? 'RSD';
+    return Number(n).toLocaleString('sr-RS') + ' ' + (c === 'EUR' ? '€' : 'din');
+  }
+  submit = (e) => {
+    e.preventDefault();
+    const { name, email, amount } = this.state;
+    if (name.trim().length < 3) return this.setState({ error: 'Unesite ime i prezime.' });
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return this.setState({ error: 'Unesite ispravnu email adresu.' });
+    if (!(Number(amount) > 0)) return this.setState({ error: 'Izaberite ili unesite iznos donacije.' });
+    this.setState({ submitted: true, error: '' });
+  };
+  names = ['Gala', 'Mila', 'Diksi', 'Bela', 'Lari', 'Vasa', 'Žuća', 'Sivko'];
+  gallerySrc = {
+    0: ['', 'uploads/1792784523179.jpeg', 'uploads/1792784523238.jpeg', 'uploads/1792784523209.jpeg', 'uploads/1792784523222.jpeg'],
+    1: ['', 'uploads/1000012139.jpg', 'uploads/1000012140.jpg', 'uploads/1000012143.jpg', 'uploads/1000012141.jpg'],
+    2: ['uploads/9d5b885c-c6ea-43be-b05f-f0beece2c599.jpg', 'uploads/7e250c71-20d2-4627-9f81-f0c6433db9ad.jpg', 'uploads/884a5b88-994b-4c40-9b88-9730c8d87690.jpg', 'uploads/a12a7a79-b714-47f3-8f09-18e86b4fc908.jpg', 'uploads/aa8502cd-bcc7-451d-97f9-e56634876876.jpg'],
+    3: ['', 'uploads/f2717fd0-cc65-4492-aae3-1624e20e80b7.jpg', 'uploads/8c88c7c0-8093-4fee-bef6-d1189738d26e.jpg', 'uploads/777642fc-0e25-4eb6-a64a-93b80d91ed59.jpg', 'uploads/899ddf6c-bc72-4dbb-8f87-c54edcf3c690.jpg'],
+    4: ['', 'uploads/1000012173.jpg', 'uploads/1000012174.jpg', 'uploads/1000012178.jpg', 'uploads/1000012176.jpg'],
+    5: ['uploads/1000012151.jpg', 'uploads/1000012148.jpg', 'uploads/1000012146.jpg', 'uploads/1000012147.jpg', 'uploads/1000012180.jpg'],
+    6: ['uploads/hh.jpg']
+  };
+  headerRef = React.createRef();
+  componentDidMount() {
+    this.ro = new ResizeObserver(() => { const el = this.headerRef.current; if (el) this.setState({ headerH: el.offsetHeight }); });
+    if (this.headerRef.current) this.ro.observe(this.headerRef.current);
+    this.onKey = e => {
+      if (this.state.gallery == null) return;
+      if (e.key === 'Escape') this.setState({ gallery: null });
+      if (e.key === 'ArrowRight') this.step(1);
+      if (e.key === 'ArrowLeft') this.step(-1);
+    };
+    window.addEventListener('keydown', this.onKey);
+  }
+  componentWillUnmount() { this.ro && this.ro.disconnect(); window.removeEventListener('keydown', this.onKey); }
+  step(d) { this.setState(s => ({ photo: (s.photo + d + 5) % 5 })); }
+  galleryVals() {
+    const g = this.state.gallery, ph = this.state.photo || 0, v = {};
+    this.names.forEach((_, i) => { v['open' + (i + 1)] = () => this.setState({ gallery: i, photo: 0 }); });
+    if (g == null) return { ...v, galleryOpen: false, photos: [] };
+    const name = this.names[g];
+    return {
+      ...v,
+      galleryOpen: true,
+      galleryName: name,
+      photoLabel: (ph + 1) + ' / 5',
+      photos: [0, 1, 2, 3, 4].map(k => ({
+        id: k === 0 ? 'animal-' + (g + 1) : 'animal-' + (g + 1) + '-' + (k + 1),
+        src: (this.gallerySrc[g] || [])[k] || '',
+        fit: ((g === 3 && k === 1) || (g === 4 && k === 2) || (g === 5 && k === 2)) ? 'contain' : 'cover',
+        ph: k === 0 ? 'Glavna slika: ' + name : name + ' – slika ' + (k + 1),
+        display: k === ph ? 'block' : 'none',
+        dotW: k === ph ? '26px' : '10px',
+        dotBg: k === ph ? '#3B322C' : '#E0D5C9',
+        go: () => this.setState({ photo: k })
+      })),
+      closeGallery: () => this.setState({ gallery: null }),
+      stop: e => e.stopPropagation(),
+      prev: () => this.step(-1),
+      next: () => this.step(1)
+    };
+  }
+  renderVals() {
+    const eur = (this.props.currency ?? 'RSD') === 'EUR';
+    const vals = eur ? [2, 5, 30, 50] : [200, 500, 5000, 7000];
+    const s = this.state;
+    return {
+      ...s,
+      ...this.galleryVals(),
+      headerRef: this.headerRef,
+      headerH: s.headerH || 81,
+      currency: eur ? 'EUR' : 'RSD',
+      tierA: this.fmt(vals[1]), tierB: this.fmt(vals[2]), tierC: this.fmt(vals[3]),
+      presets: vals.map(v => {
+        const on = Number(s.amount) === v;
+        return { label: v.toLocaleString('sr-RS'), bg: on ? '#F4B183' : '#FFFAF4', border: on ? '#E9935A' : '#E5DACE', pick: () => this.setState({ amount: String(v), error: '' }) };
+      }),
+      notSubmitted: !s.submitted,
+      error: s.error || false,
+      firstName: s.name.trim().split(' ')[0],
+      amountLabel: s.amount ? this.fmt(s.amount) : '',
+      onName: e => this.setState({ name: e.target.value }),
+      onEmail: e => this.setState({ email: e.target.value }),
+      onAmount: e => this.setState({ amount: e.target.value }),
+      submit: this.submit,
+      reset: () => this.setState({ name: '', email: '', amount: '', submitted: false, error: '' })
+    };
+  }
+}
+</script>
+</body>
+</html>
