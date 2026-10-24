@@ -37,18 +37,25 @@ input:focus{outline:2px solid #E9935A;outline-offset:1px}
       <a href="#udomljavanje" style="color:#3B322C;text-decoration:none" style-hover="color:#B4541F">Udomljavanje</a>
       <a href="#sterilizacija" style="color:#3B322C;text-decoration:none" style-hover="color:#B4541F">Zašto sterilizacija</a>
       <a href="#donacije" style="color:#3B322C;text-decoration:none" style-hover="color:#B4541F">Donacije novca</a>
-      <a href="#oprema" style="color:#3B322C;text-decoration:none" style-hover="color:#B4541F">Donacije hrane i opreme</a>
+      <a href="#oprema" style="color:#3B322C;text-decoration:none" style-hover="color:#B4541F">Ostale donacije</a>
+      <a href="#pomoc-sami" style="color:#3B322C;text-decoration:none" style-hover="color:#B4541F">Pomozite sami</a>
       <a href="#srecni" style="color:#3B322C;text-decoration:none" style-hover="color:#B4541F">Srećno udomljeni</a>
     </nav>
   </div>
 </header>
 <div style="height:{{ headerH }}px"></div>
 
-<section id="pocetna" style="max-width:1120px;margin:0 auto;padding:clamp(36px,8vw,64px) clamp(16px,4vw,24px) clamp(56px,10vw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:center">
-  <div style="display:flex;flex-direction:column;gap:24px">
+<section id="pocetna" style="position:relative;overflow:hidden;isolation:isolate;min-height:clamp(560px,82vh,760px);display:flex;align-items:center">
+  <div style="position:absolute;inset:0;z-index:-2">
+    <image-slot id="hero" src="uploads/1000012176-58463f93.jpg" shape="rect" placeholder="Fotografija: maca i kuca u skloništu"></image-slot>
+  </div>
+  <div style="position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(255,250,244,0.78) 0%,rgba(255,250,244,0.66) 34%,rgba(255,250,244,0.25) 56%,rgba(255,250,244,0) 72%)"></div>
+  <div style="position:absolute;top:0;bottom:0;left:0;z-index:-1;pointer-events:none;width:max(0px, min(100%, (720px - 100%) * 999));background:rgba(255,250,244,0.55)"></div>
+  <div style="width:100%;max-width:1120px;margin:0 auto;padding:clamp(32px,6vw,48px) clamp(16px,4vw,24px) clamp(80px,14vw,140px)">
+  <div style="display:flex;flex-direction:column;gap:24px;max-width:560px">
     <span style="align-self:flex-start;background:#E4EFDF;color:#3F6A3B;font-weight:700;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;padding:7px 14px;border-radius:999px">Udomljavanje · Sterilizacija · Briga</span>
     <h1 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(38px,5.2vw,60px);line-height:1.08;text-wrap:balance">Svaka šapa zaslužuje topao dom</h1>
-    <p style="margin:0;font-size:19px;line-height:1.6;color:#5E544C;max-width:520px;text-wrap:pretty">Na ulici ih čekaju hladne noći, glad i strah. Kod vas ih može čekati ćebe, puna činija i neko ko će ih voleti. Udomite, donirajte ili podelite priču.</p>
+    <p style="margin:0;font-size:19px;line-height:1.6;color:#3B322C;max-width:520px;text-wrap:pretty">Na ulici ih čekaju hladne noći, glad i strah. Kod vas ih može čekati ćebe, puna činija i neko ko će ih voleti. Udomite, donirajte ili podelite priču.</p>
     <div style="display:flex;flex-wrap:wrap;gap:12px">
       <a href="#udomljavanje" style="background:#3B322C;color:#FFFAF4;text-decoration:none;font-weight:700;padding:15px 26px;border-radius:999px;font-size:16px" style-hover="background:#56483F">Upoznaj šapice</a>
       <a href="#donacije" style="background:#F4B183;color:#3B322C;text-decoration:none;font-weight:700;padding:15px 26px;border-radius:999px;font-size:16px" style-hover="background:#EE9E68">Doniraj za sterilizaciju</a>
@@ -58,11 +65,6 @@ input:focus{outline:2px solid #E9935A;outline-offset:1px}
           <a href="https://www.facebook.com/sapicetrazedom" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#1877F2" style-hover="transform:translateY(-2px)"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21h3z"></path></svg></a>
         </div>
   </div>
-  <div style="position:relative;aspect-ratio:5/4">
-    <div style="position:absolute;inset:6% 0 -6% 8%;background:#E4EFDF;border-radius:36px"></div>
-    <div style="position:absolute;inset:0;left:6%;right:0">
-      <image-slot id="hero" src="uploads/1000012176-58463f93.jpg" shape="rounded" radius="32" placeholder="Fotografija: maca i kuca u skloništu"></image-slot>
-    </div>
   </div>
 </section>
 
@@ -228,12 +230,7 @@ input:focus{outline:2px solid #E9935A;outline-offset:1px}
       <p style="margin:0;font-size:19px;line-height:1.55;font-weight:600;text-wrap:pretty">životinja je već sterilisano</p>
       <p style="margin:0;font-size:16px;line-height:1.6;color:#5E544C;text-wrap:pretty">To su hiljade legla koja se nikada neće roditi na hladnom asfaltu. Svaka maca i kuca na ovim fotografijama vraćena je na sigurno – zdrava, zbrinuta i obeležena.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
-      <div style="aspect-ratio:1/1;position:relative"><image-slot id="steril-1" radius="18" placeholder="Akcija sterilizacije"></image-slot></div>
-      <div style="aspect-ratio:1/1;position:relative"><image-slot id="steril-2" radius="18" placeholder="Oporavak posle intervencije"></image-slot></div>
-      <div style="aspect-ratio:1/1;position:relative"><image-slot id="steril-3" radius="18" placeholder="Volonteri na terenu"></image-slot></div>
-      <div style="aspect-ratio:1/1;position:relative"><image-slot id="steril-4" radius="18" placeholder="Vraćeni u koloniju"></image-slot></div>
-    </div>
+    <div style="aspect-ratio:1/1;position:relative"><image-slot id="steril-main" src="uploads/sterilizacija.jpg" radius="18" placeholder="Akcija sterilizacije"></image-slot></div>
   </div>
 </section>
 
@@ -251,39 +248,35 @@ input:focus{outline:2px solid #E9935A;outline-offset:1px}
       </div>
     </div>
 
-    <div style="background:#FFFFFF;border-radius:28px;padding:clamp(22px,5vw,34px) clamp(18px,5vw,32px);box-shadow:0 20px 50px -30px rgba(59,50,44,0.35)">
-      <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
-        <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:18px" noValidate="{{ true }}">
-          <label style="display:flex;flex-direction:column;gap:7px;font-weight:700;font-size:14px">Ime i prezime
-            <input type="text" value="{{ name }}" onChange="{{ onName }}" placeholder="npr. Ana Petrović" style="font:inherit;font-weight:400;font-size:16px;padding:13px 15px;border:1.5px solid #E5DACE;border-radius:12px;background:#FFFAF4;color:#3B322C"></input>
-          </label>
-          <label style="display:flex;flex-direction:column;gap:7px;font-weight:700;font-size:14px">Email adresa
-            <input type="email" value="{{ email }}" onChange="{{ onEmail }}" placeholder="ana@primer.rs" style="font:inherit;font-weight:400;font-size:16px;padding:13px 15px;border:1.5px solid #E5DACE;border-radius:12px;background:#FFFAF4;color:#3B322C"></input>
-          </label>
-          <div style="display:flex;flex-direction:column;gap:7px">
-            <span style="font-weight:700;font-size:14px">Iznos donacije ({{ currency }})</span>
-            <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px">
-              <sc-for list="{{ presets }}" as="p" hint-placeholder-count="4">
-                <button type="button" onClick="{{ p.pick }}" style="font:inherit;font-weight:700;font-size:15px;padding:11px 4px;border-radius:12px;cursor:pointer;border:1.5px solid {{ p.border }};background:{{ p.bg }};color:#3B322C">{{ p.label }}</button>
-              </sc-for>
+    <div style="background:#FFFFFF;border-radius:28px;padding:clamp(22px,5vw,34px) clamp(18px,5vw,32px);box-shadow:0 20px 50px -30px rgba(59,50,44,0.35);display:flex;flex-direction:column;gap:22px">
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(24px,2.6vw,28px);line-height:1.2">Podržite naš rad uplatom na račun</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Kliknite na „Kopiraj“ pored podatka i nalepite ga u svoju bankarsku aplikaciju.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#F3ECE4;border-radius:999px;padding:4px">
+        <button type="button" onClick="{{ tabRs }}" style="font:inherit;font-weight:700;font-size:15px;padding:10px 8px;border:none;border-radius:999px;cursor:pointer;background:{{ tabRsBg }};color:#3B322C">Iz Srbije</button>
+        <button type="button" onClick="{{ tabInt }}" style="font:inherit;font-weight:700;font-size:15px;padding:10px 8px;border:none;border-radius:999px;cursor:pointer;background:{{ tabIntBg }};color:#3B322C">Iz inostranstva</button>
+      </div>
+      <div style="display:flex;flex-direction:column;border:1.5px solid #EFE5DA;border-radius:18px;overflow:hidden">
+        <sc-for list="{{ bankRows }}" as="r" hint-placeholder-count="4">
+          <div style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-top:1px solid {{ r.divider }};background:#FFFAF4">
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+              <span style="font-size:12px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#7A6E64">{{ r.label }}</span>
+              <span style="font-size:16px;font-weight:700;color:#3B322C;overflow-wrap:anywhere;font-variant-numeric:tabular-nums">{{ r.value }}</span>
             </div>
-            <input type="number" min="1" value="{{ amount }}" onChange="{{ onAmount }}" placeholder="Drugi iznos" style="font:inherit;font-size:16px;padding:13px 15px;border:1.5px solid #E5DACE;border-radius:12px;background:#FFFAF4;color:#3B322C"></input>
+            <button type="button" onClick="{{ r.onCopy }}" style="flex:none;font:inherit;font-weight:700;font-size:13px;padding:8px 14px;min-height:36px;border-radius:999px;cursor:pointer;border:1.5px solid {{ r.border }};background:{{ r.bg }};color:#3B322C">{{ r.copyLabel }}</button>
           </div>
-          <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
-            <p style="margin:0;color:#A33B1E;font-size:14px;font-weight:600">{{ error }}</p>
-          </sc-if>
-          <button type="submit" style="font:inherit;font-weight:800;font-size:17px;padding:16px;border:none;border-radius:999px;background:#3B322C;color:#FFFAF4;cursor:pointer" style-hover="background:#56483F">Doniraj sada</button>
-          <p style="margin:0;font-size:13px;color:#7A6E64;text-align:center">Ovo je simulacija uplate. Nijedna kartica neće biti zadužena.</p>
-        </form>
-      </sc-if>
-      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
-        <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start;padding:12px 0">
-          <span style="width:56px;height:56px;border-radius:50%;background:#A9CBA1;display:grid;place-items:center;font-size:26px">✓</span>
-          <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:28px;line-height:1.2">Hvala, {{ firstName }}!</h3>
-          <p style="margin:0;font-size:17px;line-height:1.6;color:#5E544C">Vaša donacija od <strong>{{ amountLabel }}</strong> je zabeležena. Potvrdu ćemo poslati na <strong>{{ email }}</strong>. Zajedno sprečavamo nove patnje na ulici.</p>
-          <button type="button" onClick="{{ reset }}" style="font:inherit;font-weight:700;font-size:15px;padding:12px 20px;border:1.5px solid #3B322C;border-radius:999px;background:transparent;color:#3B322C;cursor:pointer">Nova donacija</button>
-        </div>
-      </sc-if>
+        </sc-for>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h4 style="margin:0;font-size:16px;font-weight:800">Kako da uplatite</h4>
+        <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px">
+          <sc-for list="{{ bankSteps }}" as="st" hint-placeholder-count="4">
+            <li style="font-size:15px;line-height:1.55;color:#5E544C">{{ st }}</li>
+          </sc-for>
+        </ol>
+      </div>
+      <p style="margin:0;font-size:13px;line-height:1.55;color:#7A6E64;border-top:1px solid #EFE5DA;padding-top:14px">Proviziju banke za uplatu snosi uplatilac. Kod uplata iz inostranstva i banka posrednik može naplatiti trošak, pa na račun može stići nešto manji iznos od uplaćenog.</p>
     </div>
   </div>
 </section>
@@ -319,6 +312,109 @@ input:focus{outline:2px solid #E9935A;outline-offset:1px}
       <img src="assets/ikonice/cebici-256.png" alt="" style="flex:none;width:72px;height:72px;border-radius:18px;object-fit:cover;display:block"></img>
       <div style="display:flex;flex-direction:column;gap:4px"><h3 style="margin:0;font-size:18px;font-weight:800">Ćebići i prostirke</h3><p style="margin:0;font-size:15px;line-height:1.5;color:#5E544C">Topla ćebad, peškiri i jastučići za hladne noći.</p></div>
     </div>
+  </div>
+</section>
+
+<section id="pomoc-sami" style="border-top:1px solid #EFE5DA">
+  <div style="max-width:1120px;margin:0 auto;padding:clamp(56px,10vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:clamp(40px,7vw,64px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px 64px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="color:#B4541F;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Pronašli ste bebe?</span>
+        <h2 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(30px,3.6vw,42px);line-height:1.15">Kako vi možete pomoći sami</h2>
+      </div>
+      <p style="margin:0;font-size:17px;line-height:1.65;color:#5E544C;text-wrap:pretty">Kada naiđete na tek rođene mačiće ili štence, ne treba vam ni dvorište ni iskustvo. Dovoljno je kupatilo ili odvojena soba u kojoj će bebe privremeno boraviti, kutija sa ćebetom i malo vašeg vremena. Za nekoliko nedelja od bespomoćnog bića izraste razigrana životinja spremna za dom, a vi ste spasili jedan život.</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(22px,2.4vw,28px)">Osnove za mačiće i štence</h3>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px">
+        <div style="flex:1 1 260px;max-width:max(calc((100% - 32px) / 3), min(100%, (830px - 100%) * 999));min-width:min(100%,260px);background:#FFFFFF;border:1px solid #EFE5DA;border-radius:22px;padding:clamp(18px,4vw,26px);display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-size:18px;font-weight:800">Prvo grejanje</h3><p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Bebe ne mogu same da održe toplotu. Stavite ih u kutiju sa ćebetom i termoforom ili flašom tople vode umotanom u peškir, na jednoj strani kutije, da mogu da se odmaknu ako im je toplo. U prvoj nedelji gnezdo treba da bude 29–32 °C, a do četvrte nedelje postepeno se spušta na oko 24 °C. Nikada ne hranite pothlađenu bebu, prvo je polako zagrejte.</p></div>
+        <div style="flex:1 1 260px;max-width:max(calc((100% - 32px) / 3), min(100%, (830px - 100%) * 999));min-width:min(100%,260px);background:#FFFFFF;border:1px solid #EFE5DA;border-radius:22px;padding:clamp(18px,4vw,26px);display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-size:18px;font-weight:800">Formula, nikako mleko</h3><p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Kupite zamenu za majčino mleko za mačiće ili za štence u veterinarskoj apoteci ili pet shopu. Kravlje mleko izaziva proliv koji kod beba može biti opasan po život. Formulu zagrejte na telesnu temperaturu i proverite kapljicom na unutrašnjoj strani zgloba.</p></div>
+        <div style="flex:1 1 260px;max-width:max(calc((100% - 32px) / 3), min(100%, (830px - 100%) * 999));min-width:min(100%,260px);background:#FFFFFF;border:1px solid #EFE5DA;border-radius:22px;padding:clamp(18px,4vw,26px);display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-size:18px;font-weight:800">Špric i flašica</h3><p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Najmanje bebe najlakše je hraniti špricem bez igle, kap po kap, a kasnije flašicom sa cuclom. Beba uvek leži na stomaku, kao kada sisa kod majke, nikada na leđima, da joj formula ne bi otišla u pluća. Ne gurajte hranu na silu, pustite je da sisa svojim tempom.</p></div>
+        <div style="flex:1 1 260px;max-width:max(calc((100% - 32px) / 3), min(100%, (830px - 100%) * 999));min-width:min(100%,260px);background:#FFFFFF;border:1px solid #EFE5DA;border-radius:22px;padding:clamp(18px,4vw,26px);display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-size:18px;font-weight:800">Stimulacija za nuždu</h3><p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Do treće ili četvrte nedelje bebe ne mogu same da obave nuždu. Posle svakog obroka nežno masirajte stomačić i predeo ispod repa vatom ili gazom natopljenom mlakom vodom, dok ne piške i ne kake. Mokrenje treba da bude posle svakog obroka, a stolica bar jednom dnevno.</p></div>
+        <div style="flex:1 1 260px;max-width:max(calc((100% - 32px) / 3), min(100%, (830px - 100%) * 999));min-width:min(100%,260px);background:#FFFFFF;border:1px solid #EFE5DA;border-radius:22px;padding:clamp(18px,4vw,26px);display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-size:18px;font-weight:800">Higijena i odvojen prostor</h3><p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Bebe još nemaju razvijen imunitet, pa ih i najmanja infekcija može ugroziti. Pre i posle svakog hranjenja i čišćenja dobro operite ruke sapunom, nosite čistu odeću ili poseban duks samo za bebe, a špriceve, flašice i cucle posle svake upotrebe operite i prokuvajte. Držite ih odvojeno od drugih životinja u kući, bez zajedničkih činija, ćebadi i posuda za pesak, dok ih veterinar ne pregleda i ne prime vakcine.</p></div>
+        <div style="flex:1 1 260px;max-width:max(calc((100% - 32px) / 3), min(100%, (830px - 100%) * 999));min-width:min(100%,260px);background:#FFFFFF;border:1px solid #EFE5DA;border-radius:22px;padding:clamp(18px,4vw,26px);display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-size:18px;font-weight:800">Maženje četkicom za zube</h3><p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Mekana četkica za zube podseća na majčin jezik. Nežnim potezima niz leđa i glavu bebe se smiruju, lakše jedu i osećaju se sigurno. Tako ih istovremeno i čistite, a vama to postane najlepši deo dana.</p></div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:20px;align-items:start">
+    <div style="background:#FDE8D7;border-radius:28px;padding:clamp(20px,5vw,34px) clamp(16px,4vw,30px);display:flex;flex-direction:column;gap:22px">
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="color:#B4541F;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Mačići</span>
+        <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(24px,2.6vw,30px);line-height:1.2">Briga o mačićima</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Novorođeno mače teško je oko 90 do 110 grama i potpuno zavisi od nas: ne vidi, ne čuje i ne može samo da se greje ni da obavi nuždu.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px"><h4 style="margin:0;font-size:18px;font-weight:800;font-size:16px">Kako da procenite starost</h4><ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px"><li style="font-size:15px;line-height:1.55;color:#5E544C"><strong>Do 1 nedelje:</strong> oči i uši zatvorene, pupčana vrpca otpada između 3. i 5. dana.</li><li style="font-size:15px;line-height:1.55;color:#5E544C"><strong>1–2 nedelje:</strong> oči počinju da se otvaraju, plave su i mutne.</li><li style="font-size:15px;line-height:1.55;color:#5E544C"><strong>2–3 nedelje:</strong> uši se uspravljaju, pokušava da puzi i stoji.</li><li style="font-size:15px;line-height:1.55;color:#5E544C"><strong>3–4 nedelje:</strong> izbijaju prvi zubići, hoda nesigurno, može da počne da koristi pesak.</li><li style="font-size:15px;line-height:1.55;color:#5E544C"><strong>4–8 nedelja:</strong> trči i igra se, prelazi na kašastu pa čvrstu hranu.</li><li style="font-size:15px;line-height:1.55;color:#5E544C"><strong>Pravilo za laku procenu:</strong> zdravo mače dobija oko 100 grama nedeljno, pa težina u gramima podeljena sa 100 otprilike daje broj nedelja.</li></ul></div>
+      <div style="display:flex;flex-direction:column;gap:8px"><h4 style="margin:0;font-size:18px;font-weight:800;font-size:16px">Merenje telesne mase</h4><p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Merite mače svakog dana u isto vreme, pre hranjenja, na kuhinjskoj vagi koja meri na gram. Zapisujte rezultate u svesku ili telefon. Zdravo mače dobija 10 do 15 grama dnevno. Ako težina stoji ili pada, to je prvi znak da nešto nije u redu.</p></div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h4 style="margin:0;font-size:18px;font-weight:800;font-size:16px">Koliko i koliko često jedu</h4>
+        <div style="background:#FFFFFF;border-radius:18px;padding:clamp(10px,3vw,16px) clamp(10px,3vw,16px) 6px">
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(4px,1.5vw,8px);padding:10px 0;overflow-wrap:anywhere;hyphens:auto;border-top:1px solid #EFE5DA;font-size:clamp(12.5px,3.4vw,14px);line-height:1.4;font-weight:800;color:#3B322C;border-top:none;padding-top:0"><span style="">Uzrast</span><span>Težina</span><span>Po obroku</span><span>Obroci</span></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(4px,1.5vw,8px);padding:10px 0;overflow-wrap:anywhere;hyphens:auto;border-top:1px solid #EFE5DA;font-size:clamp(12.5px,3.4vw,14px);line-height:1.4;color:#5E544C"><span style="font-weight:700;color:#3B322C">0–1 ned.</span><span>do 150 g</span><span>2–6 ml</span><span>na 2 sata</span></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(4px,1.5vw,8px);padding:10px 0;overflow-wrap:anywhere;hyphens:auto;border-top:1px solid #EFE5DA;font-size:clamp(12.5px,3.4vw,14px);line-height:1.4;color:#5E544C"><span style="font-weight:700;color:#3B322C">1–2 ned.</span><span>150–250 g</span><span>6–10 ml</span><span>na 2–3 sata</span></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(4px,1.5vw,8px);padding:10px 0;overflow-wrap:anywhere;hyphens:auto;border-top:1px solid #EFE5DA;font-size:clamp(12.5px,3.4vw,14px);line-height:1.4;color:#5E544C"><span style="font-weight:700;color:#3B322C">2–3 ned.</span><span>250–350 g</span><span>10–14 ml</span><span>na 3–4 sata</span></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(4px,1.5vw,8px);padding:10px 0;overflow-wrap:anywhere;hyphens:auto;border-top:1px solid #EFE5DA;font-size:clamp(12.5px,3.4vw,14px);line-height:1.4;color:#5E544C"><span style="font-weight:700;color:#3B322C">3–4 ned.</span><span>350–450 g</span><span>14–18 ml</span><span>na 4–5 sati</span></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(4px,1.5vw,8px);padding:10px 0;overflow-wrap:anywhere;hyphens:auto;border-top:1px solid #EFE5DA;font-size:clamp(12.5px,3.4vw,14px);line-height:1.4;color:#5E544C"><span style="font-weight:700;color:#3B322C">4–5 ned.</span><span>450–550 g</span><span>18–22 ml + kašica</span><span>na 5–6 sati</span></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(4px,1.5vw,8px);padding:10px 0;overflow-wrap:anywhere;hyphens:auto;border-top:1px solid #EFE5DA;font-size:clamp(12.5px,3.4vw,14px);line-height:1.4;color:#5E544C"><span style="font-weight:700;color:#3B322C">5–8 ned.</span><span>550–850 g</span><span>vlažna hrana</span><span>4 puta dnevno</span></div>
+        </div>
+        <p style="margin:0;font-size:13px;line-height:1.5;color:#7A6F66">Količine su orijentacione. Uvek proverite uputstvo na pakovanju formule i pratite težinu.</p>
+      </div>
+    </div>
+    <div style="background:#E4EFDF;border-radius:28px;padding:clamp(20px,5vw,34px) clamp(16px,4vw,30px);display:flex;flex-direction:column;gap:22px">
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="color:#B4541F;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Štenci</span>
+        <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(24px,2.6vw,30px);line-height:1.2">Briga o štencima</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Težina novorođenog šteneta zavisi od rase, od 100 grama do preko pola kilograma, pa je kod štenaca važnije pratiti koliko napreduju nego koliko teže.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px"><h4 style="margin:0;font-size:18px;font-weight:800;font-size:16px">Kako da procenite starost</h4><ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px"><li style="font-size:15px;line-height:1.55;color:#5E544C"><strong>Do 1 nedelje:</strong> oči i uši zatvorene, uglavnom spava i jede.</li><li style="font-size:15px;line-height:1.55;color:#5E544C"><strong>10–14 dana:</strong> otvaraju se oči.</li><li style="font-size:15px;line-height:1.55;color:#5E544C"><strong>2–3 nedelje:</strong> otvaraju se ušni kanali, počinje da reaguje na zvuk i da puzi.</li><li style="font-size:15px;line-height:1.55;color:#5E544C"><strong>3–4 nedelje:</strong> izbijaju zubići, hoda i počinje da se igra sa braćom i sestrama.</li><li style="font-size:15px;line-height:1.55;color:#5E544C"><strong>4–8 nedelja:</strong> prelazi na kašastu, pa na čvrstu hranu za štence.</li></ul></div>
+      <div style="display:flex;flex-direction:column;gap:8px"><h4 style="margin:0;font-size:18px;font-weight:800;font-size:16px">Merenje telesne mase</h4><p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Merite štene svakog dana u isto vreme, pre hranjenja. Zdravo štene dnevno dobija 5 do 10% svoje težine i udvostručuje porođajnu težinu za 7 do 10 dana. Kod štenaca se dnevna količina računa prema težini: izmerite štene, izračunajte koliko mu treba za ceo dan i podelite na broj obroka.</p></div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h4 style="margin:0;font-size:18px;font-weight:800;font-size:16px">Koliko i koliko često jedu</h4>
+        <div style="background:#FFFFFF;border-radius:18px;padding:clamp(10px,3vw,16px) clamp(10px,3vw,16px) 6px">
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(4px,1.5vw,8px);padding:10px 0;overflow-wrap:anywhere;hyphens:auto;border-top:1px solid #EFE5DA;font-size:clamp(12.5px,3.4vw,14px);line-height:1.4;font-weight:800;color:#3B322C;border-top:none;padding-top:0"><span style="">Uzrast</span><span>Težina</span><span>Po obroku</span><span>Obroci</span></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(4px,1.5vw,8px);padding:10px 0;overflow-wrap:anywhere;hyphens:auto;border-top:1px solid #EFE5DA;font-size:clamp(12.5px,3.4vw,14px);line-height:1.4;color:#5E544C"><span style="font-weight:700;color:#3B322C">0–1 ned.</span><span>300–500 g</span><span>5–10 ml</span><span>na 2–3 sata</span></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(4px,1.5vw,8px);padding:10px 0;overflow-wrap:anywhere;hyphens:auto;border-top:1px solid #EFE5DA;font-size:clamp(12.5px,3.4vw,14px);line-height:1.4;color:#5E544C"><span style="font-weight:700;color:#3B322C">1–2 ned.</span><span>500–800 g</span><span>10–20 ml</span><span>na 3 sata</span></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(4px,1.5vw,8px);padding:10px 0;overflow-wrap:anywhere;hyphens:auto;border-top:1px solid #EFE5DA;font-size:clamp(12.5px,3.4vw,14px);line-height:1.4;color:#5E544C"><span style="font-weight:700;color:#3B322C">2–3 ned.</span><span>800–1200 g</span><span>20–35 ml</span><span>na 4 sata</span></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(4px,1.5vw,8px);padding:10px 0;overflow-wrap:anywhere;hyphens:auto;border-top:1px solid #EFE5DA;font-size:clamp(12.5px,3.4vw,14px);line-height:1.4;color:#5E544C"><span style="font-weight:700;color:#3B322C">3–4 ned.</span><span>1,2–1,8 kg</span><span>35–60 ml + kašica</span><span>na 4–5 sati</span></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(4px,1.5vw,8px);padding:10px 0;overflow-wrap:anywhere;hyphens:auto;border-top:1px solid #EFE5DA;font-size:clamp(12.5px,3.4vw,14px);line-height:1.4;color:#5E544C"><span style="font-weight:700;color:#3B322C">4–8 ned.</span><span>1,8–4 kg</span><span>razmekšana hrana za štence</span><span>4 puta dnevno</span></div>
+        </div>
+        <p style="margin:0;font-size:13px;line-height:1.5;color:#7A6F66">Vrednosti su za štene srednje veličine, kakva je većina mešanaca. Za male i velike rase računajte dnevno 13 do 22 ml formule na 100 g težine, podeljeno na obroke. Uvek proverite uputstvo na pakovanju formule i pratite težinu.</p>
+      </div>
+    </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px;align-items:start">
+      <div style="background:#FFFFFF;border:1px solid #EFE5DA;border-radius:22px;padding:clamp(18px,4vw,26px);display:flex;flex-direction:column;gap:8px;gap:12px">
+        <h3 style="margin:0;font-size:18px;font-weight:800;font-size:20px">Kako da pratite napredak</h3>
+        <ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px"><li style="font-size:15px;line-height:1.55;color:#5E544C">Svakog dana zapisujte težinu, koliko je beba pojela i da li je obavila nuždu.</li><li style="font-size:15px;line-height:1.55;color:#5E544C">Zdrava beba posle obroka ima pun, okrugao stomačić i mirno spava.</li><li style="font-size:15px;line-height:1.55;color:#5E544C">Krzno je čisto i sjajno, oči bistre, a beba je sve aktivnija iz dana u dan.</li><li style="font-size:15px;line-height:1.55;color:#5E544C">Oko četvrte nedelje ponudite kašicu od formule i vlažne hrane u plitkoj činiji, a pored nje plitku posudu sa peskom za mačiće.</li><li style="font-size:15px;line-height:1.55;color:#5E544C">Prvi pregled kod veterinara, čišćenje od parazita i plan vakcinacije dogovorite što pre.</li></ul>
+      </div>
+      <div style="background:#FBE2D3;border-radius:22px;padding:clamp(18px,4vw,26px);display:flex;flex-direction:column;gap:12px">
+        <h3 style="margin:0;font-size:18px;font-weight:800;font-size:20px;color:#8A3A12">Odmah se javite veterinaru ako beba:</h3>
+        <ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px"><li style="font-size:15px;line-height:1.55;color:#3B322C">odbija hranu dva obroka zaredom ili nije jela duže od 6 do 8 sati</li><li style="font-size:15px;line-height:1.55;color:#3B322C">ne dobija na težini ili gubi težinu</li><li style="font-size:15px;line-height:1.55;color:#3B322C">nije piškila posle stimulacije ili nije kakila više od dva dana</li><li style="font-size:15px;line-height:1.55;color:#3B322C">ima proliv, povraća ili joj formula izlazi na nos</li><li style="font-size:15px;line-height:1.55;color:#3B322C">hladna je na dodir, mlitava i ne reaguje</li><li style="font-size:15px;line-height:1.55;color:#3B322C">teško diše, kija ili ima gnoj u očima</li><li style="font-size:15px;line-height:1.55;color:#3B322C">neprestano plače i ne može da se smiri</li><li style="font-size:15px;line-height:1.55;color:#3B322C">ima buve, krpelje ili unutrašnje parazite (gliste u stolici, naduven stomačić) – kod beba ne koristite preparate na svoju ruku, jer većina nije bezbedna za njih</li></ul>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#3B322C;font-weight:700">Kod beba stanje može da se pogorša za nekoliko sati, zato ne čekajte jutro.</p>
+      </div>
+    </div>
+
+    <div style="width:100%;max-width:640px;align-self:center;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px">
+      <div style="aspect-ratio:4/5;position:relative"><image-slot id="pomoc-1" src="uploads/689880925_1286260833660007_456090047914707770_n.jpg" radius="18" placeholder="Hranjenje špricem ili flašicom" style="position:absolute;inset:0"></image-slot></div>
+      <div style="aspect-ratio:4/5;position:relative"><image-slot id="pomoc-2" src="uploads/689820555_1286260873660003_7753223036371799964_n.jpg" radius="18" placeholder="Gnezdo sa ćebetom i termoforom" style="position:absolute;inset:0"></image-slot></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:32px 64px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <span style="color:#B4541F;font-weight:800;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Kada porastu</span>
+        <h3 style="margin:0;font-family:'Young Serif',serif;font-weight:400;font-size:clamp(24px,2.8vw,32px);line-height:1.2">Od spasavanja do novog doma</h3>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty;font-size:17px">Briga ne prestaje kada bebe prohodaju. Ovi koraci osiguravaju da svaka beba dobije dobar dom i da se priča ne ponovi.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:40px;height:40px;border-radius:999px;background:#3B322C;color:#FFFAF4;display:grid;place-items:center;font-weight:800;font-size:16px">1</span><div style="display:flex;flex-direction:column;gap:4px"><h3 style="margin:0;font-size:18px;font-weight:800">Sterilišite majku</h3><p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Ako je majka pored mladunaca, pobrinite se da bude sterilisana čim ih odbije. Tako sprečavate da za nekoliko meseci na ulici bude novo leglo. Javite nam se, pomoći ćemo.</p></div></div>
+        <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:40px;height:40px;border-radius:999px;background:#3B322C;color:#FFFAF4;display:grid;place-items:center;font-weight:800;font-size:16px">2</span><div style="display:flex;flex-direction:column;gap:4px"><h3 style="margin:0;font-size:18px;font-weight:800">Udomljavanje sa 3 do 3,5 meseca</h3><p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Mladunci su spremni za novi dom kada napune 3 do 3,5 meseca. Tada se sami hrane, koriste pesak, socijalizovani su i primili su prve vakcine.</p></div></div>
+        <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:40px;height:40px;border-radius:999px;background:#3B322C;color:#FFFAF4;display:grid;place-items:center;font-weight:800;font-size:16px">3</span><div style="display:flex;flex-direction:column;gap:4px"><h3 style="margin:0;font-size:18px;font-weight:800">Pokažite ih svetu</h3><p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Delite slike i snimke na društvenim mrežama, u lokalnim grupama i kod prijatelja. Odštampajte plakate sa slikom i brojem telefona i zalepite ih po gradu, u veterinarskim ambulantama i prodavnicama. Što više ljudi vidi bebe, brže će naći dom.</p></div></div>
+        <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:40px;height:40px;border-radius:999px;background:#3B322C;color:#FFFAF4;display:grid;place-items:center;font-weight:800;font-size:16px">4</span><div style="display:flex;flex-direction:column;gap:4px"><h3 style="margin:0;font-size:18px;font-weight:800">Dogovor sa udomiteljem</h3><p style="margin:0;font-size:15px;line-height:1.6;color:#5E544C;text-wrap:pretty">Pre predaje obavezno se dogovorite sa udomiteljem da će životinja biti sterilisana na vreme i da će o njoj odgovorno brinuti: hrana, veterinar, bezbedan prostor i ljubav za ceo život.</p></div></div>
+      </div>
+    </div>
+
+    <p style="margin:0;align-self:center;max-width:760px;text-align:center;font-family:'Young Serif',serif;font-size:clamp(22px,2.6vw,28px);line-height:1.4;color:#3B322C;text-wrap:balance">Ne treba vam ništa posebno: jedna soba, malo strpljenja i veliko srce. Učinićete ogromno dobro delo i spasiti život.</p>
   </div>
 </section>
 
@@ -418,21 +514,70 @@ input:focus{outline:2px solid #E9935A;outline-offset:1px}
   </div>
 </sc-if>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;currency&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;RSD&quot;,&quot;EUR&quot;],&quot;default&quot;:&quot;RSD&quot;,&quot;tsType&quot;:&quot;'RSD'|'EUR'&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;currency&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;RSD&quot;,&quot;EUR&quot;],&quot;default&quot;:&quot;RSD&quot;,&quot;tsType&quot;:&quot;'RSD'|'EUR'&quot;},&quot;bankRecipient&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;[Naziv udruženja, adresa, grad]&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Podaci za uplatu&quot;},&quot;bankAccount&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;[000-0000000000000-00]&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Podaci za uplatu&quot;},&quot;bankPurpose&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Donacija za sterilizaciju&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Podaci za uplatu&quot;},&quot;bankReference&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Podaci za uplatu&quot;},&quot;bankIban&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;[RS35 0000 0000 0000 0000 00]&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Podaci za uplatu&quot;},&quot;bankSwift&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;[XXXXRSBG]&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Podaci za uplatu&quot;},&quot;bankName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;[Naziv i adresa banke]&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Podaci za uplatu&quot;}}">
 class Component extends DCLogic {
-  state = { name: '', email: '', amount: '', submitted: false, error: '' };
+  state = { tab: 'rs', copied: null };
   fmt(n) {
     const c = this.props.currency ?? 'RSD';
     return Number(n).toLocaleString('sr-RS') + ' ' + (c === 'EUR' ? '€' : 'din');
   }
-  submit = (e) => {
-    e.preventDefault();
-    const { name, email, amount } = this.state;
-    if (name.trim().length < 3) return this.setState({ error: 'Unesite ime i prezime.' });
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return this.setState({ error: 'Unesite ispravnu email adresu.' });
-    if (!(Number(amount) > 0)) return this.setState({ error: 'Izaberite ili unesite iznos donacije.' });
-    this.setState({ submitted: true, error: '' });
-  };
+  copy(key, text) {
+    const done = () => {
+      clearTimeout(this._t);
+      this.setState({ copied: key });
+      this._t = setTimeout(() => this.setState({ copied: null }), 1800);
+    };
+    const fallback = () => {
+      const ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta); done();
+    };
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(done, fallback);
+    else fallback();
+  }
+  bankVals() {
+    const p = this.props, s = this.state, intl = s.tab === 'int';
+    const recipient = p.bankRecipient || '[Naziv udruženja, adresa, grad]';
+    const purpose = p.bankPurpose || 'Donacija za sterilizaciju';
+    const account = p.bankAccount || '[000-0000000000000-00]';
+    const reference = p.bankReference || '';
+    const iban = p.bankIban || '[RS35 0000 0000 0000 0000 00]';
+    const swift = p.bankSwift || '[XXXXRSBG]';
+    const bank = p.bankName || '[Naziv i adresa banke]';
+    const raw = intl
+      ? [['Primalac (Beneficiary)', recipient], ['IBAN', iban, true], ['SWIFT / BIC', swift], ['Banka primaoca', bank], ['Svrha (Payment details)', 'Donation for sterilization']]
+      : [['Primalac', recipient], ['Broj računa', account, true], ['Svrha uplate', purpose], ['Šifra plaćanja', '289'], ...(reference ? [['Poziv na broj', reference]] : [])];
+    return {
+      tabRs: () => this.setState({ tab: 'rs', copied: null }),
+      tabInt: () => this.setState({ tab: 'int', copied: null }),
+      tabRsBg: intl ? 'transparent' : '#FFFFFF',
+      tabIntBg: intl ? '#FFFFFF' : 'transparent',
+      bankRows: raw.map(([label, value, strip], i) => {
+        const key = s.tab + i, on = s.copied === key;
+        return {
+          label, value,
+          divider: i ? '#EFE5DA' : 'transparent',
+          copyLabel: on ? 'Kopirano ✓' : 'Kopiraj',
+          bg: on ? '#A9CBA1' : '#FFFFFF',
+          border: on ? '#7FA877' : '#E5DACE',
+          onCopy: () => this.copy(key, strip ? value.replace(/\s/g, '') : value)
+        };
+      }),
+      bankSteps: intl ? [
+        'U svojoj banci ili aplikaciji izaberite međunarodnu uplatu (SWIFT / SEPA).',
+        'Kopirajte i unesite ime primaoca, IBAN i SWIFT/BIC kod.',
+        'Upišite iznos i valutu. Najjednostavnije je u evrima.',
+        'U opis uplate unesite „Donation for sterilization“ i potvrdite.'
+      ] : [
+        'Otvorite mobilno ili elektronsko bankarstvo, ili ponesite podatke u banku ili poštu.',
+        'Izaberite novi nalog za plaćanje i kopirajte primaoca, broj računa i svrhu uplate.',
+        'Kao šifru plaćanja unesite 289, a zatim upišite iznos koji želite da donirate.',
+        'Proverite podatke i potvrdite uplatu. Hvala vam!'
+      ]
+    };
+  }
   names = ['Gala', 'Mila', 'Diksi', 'Bela', 'Lari', 'Vasa', 'Žuća', 'Sivko'];
   gallerySrc = {
     0: ['uploads/1792784523194.jpeg', 'uploads/1792784523179.jpeg', 'uploads/1792784523238.jpeg', 'uploads/1792784523209.jpeg', 'uploads/1792784523222.jpeg'],
@@ -455,7 +600,7 @@ class Component extends DCLogic {
     };
     window.addEventListener('keydown', this.onKey);
   }
-  componentWillUnmount() { this.ro && this.ro.disconnect(); window.removeEventListener('keydown', this.onKey); }
+  componentWillUnmount() { clearTimeout(this._t); this.ro && this.ro.disconnect(); window.removeEventListener('keydown', this.onKey); }
   step(d) { this.setState(s => ({ photo: (s.photo + d + 5) % 5 })); }
   galleryVals() {
     const g = this.state.gallery, ph = this.state.photo || 0, v = {};
@@ -490,23 +635,11 @@ class Component extends DCLogic {
     return {
       ...s,
       ...this.galleryVals(),
+      ...this.bankVals(),
       headerRef: this.headerRef,
       headerH: s.headerH || 81,
       currency: eur ? 'EUR' : 'RSD',
-      tierA: this.fmt(vals[1]), tierB: this.fmt(vals[2]), tierC: this.fmt(vals[3]),
-      presets: vals.map(v => {
-        const on = Number(s.amount) === v;
-        return { label: v.toLocaleString('sr-RS'), bg: on ? '#F4B183' : '#FFFAF4', border: on ? '#E9935A' : '#E5DACE', pick: () => this.setState({ amount: String(v), error: '' }) };
-      }),
-      notSubmitted: !s.submitted,
-      error: s.error || false,
-      firstName: s.name.trim().split(' ')[0],
-      amountLabel: s.amount ? this.fmt(s.amount) : '',
-      onName: e => this.setState({ name: e.target.value }),
-      onEmail: e => this.setState({ email: e.target.value }),
-      onAmount: e => this.setState({ amount: e.target.value }),
-      submit: this.submit,
-      reset: () => this.setState({ name: '', email: '', amount: '', submitted: false, error: '' })
+      tierA: this.fmt(vals[1]), tierB: this.fmt(vals[2]), tierC: this.fmt(vals[3])
     };
   }
 }
